@@ -35,10 +35,10 @@ artifacts_dir=/Users/.../project/artifacts
 
 ### 3️⃣ Run CLI
 
-The entrypoint to the package is the `src/cli.py` file. You can run an experiment after having created an experiment configuration file. The package is shipped with the config at `src/configs/linear_regression.yaml` so you can directly use it by running:
+The entrypoint to the package is the `src/cli.py` file. You can run an experiment after having created an experiment configuration file. The package is shipped with the config at `src/configs/sequential_regressor.yaml` so you can directly use it by running:
 
 ```
-python src/cli.py --experiment-name linear_regression --experiment-config-path src/configs/linear_regression.yaml
+python src/cli.py --experiment-name sequential_regressor --experiment-config-path src/configs/sequential_regressor.yaml
 ```
 
 You can change the `--experiment-name` argument if you want to save under a different dir to compare across experiments.

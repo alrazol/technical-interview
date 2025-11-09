@@ -67,6 +67,16 @@ def train(
         plot_errors_distribution(y_preds=y_preds_insample, y_true=y_test, nbins=1000),
         "errors_distribution_train",
     )
+    artifacts_registry.log_preds_actuals_as_parquet(
+        y_preds=pl.DataFrame({"y_pred": y_preds}),
+        y_true=y_test,
+        file_name="preds_vs_actuals_test",
+    )
+    artifacts_registry.log_preds_actuals_as_parquet(
+        y_preds=pl.DataFrame({"y_pred": y_preds_insample}),
+        y_true=y_train,
+        file_name="preds_vs_actuals_train",
+    )
     logger.info(
         "Test metrics",
         mape=round(float(evaluator_test.mape), 3),

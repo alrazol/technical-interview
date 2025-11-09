@@ -1,3 +1,4 @@
+import polars as pl
 from abc import ABC, abstractmethod
 import plotly.graph_objects as go
 
@@ -12,3 +13,11 @@ class BaseExperimentRegistry(ABC):
 
     @abstractmethod
     def log_str_as_artifact(self, content: str, file_name: str) -> None: ...
+
+    @abstractmethod
+    def log_preds_actuals_as_parquet(
+        self,
+        y_preds: pl.DataFrame,
+        y_true: pl.DataFrame,
+        file_name: str,
+    ) -> None: ...

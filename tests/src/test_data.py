@@ -2,7 +2,6 @@ import pytest
 import polars as pl
 from pathlib import Path
 from unittest.mock import patch, MagicMock
-from polars.testing import assert_frame_equal
 
 from src.data import DatasetLoader
 
