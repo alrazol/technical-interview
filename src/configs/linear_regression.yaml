@@ -1,0 +1,6 @@
+description:
+  comment: Configuration file for a sequential model.
+model:
+  algorithm: SequentialRegressor
+  hyper_parameters:
+    fit_intercept: true
